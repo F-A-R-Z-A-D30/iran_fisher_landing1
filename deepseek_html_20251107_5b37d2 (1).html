@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ایران فیشر | طوطی برزیلی</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        :root {
+            --vibrant-green: #27AE60;
+            --bright-yellow: #F1C40F;
+            --warm-orange: #E67E22;
+            --hot-pink: #E84393;
+            --electric-blue: #0984E3;
+            --pure-white: #FFFFFF;
+            --dark-bg: #2D3436;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a3a, #0c1b2b);
+            color: var(--pure-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+        
+        .container {
+            width: 95%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            min-height: 100vh;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(231, 126, 34, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(241, 196, 15, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(39, 174, 96, 0.2) 0%, transparent 50%),
+                linear-gradient(135deg, #0c1b2b 0%, #1a2a3a 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .header-content {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .logo-main {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, var(--vibrant-green), var(--electric-blue));
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 
+                0 0 30px rgba(39, 174, 96, 0.5),
+                0 0 60px rgba(9, 132, 227, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 4s infinite alternate;
+            border: 4px solid var(--bright-yellow);
+        }
+
+        .logo-main::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: conic-gradient(
+                transparent, 
+                var(--bright-yellow), 
+                transparent, 
+                var(--warm-orange), 
+                transparent, 
+                var(--hot-pink), 
+                transparent
+            );
+            animation: rotate 10s linear infinite;
+        }
+
+        .logo-main::after {
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            background: url('https://heyvanak.com/wp-content/uploads/2025/07/Fischers-lovebird-min.jpg') center/cover;
+            border-radius: 50%;
+        }
+
+        .brand-text {
+            text-align: center;
+        }
+
+        .brand-text h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(45deg, var(--bright-yellow), var(--warm-orange), var(--hot-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.8rem;
+            font-weight: 800;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        .brand-tagline {
+            font-size: 1.6rem;
+            color: var(--pure-white);
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+
+        .brand-tagline::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--vibrant-green), var(--electric-blue));
+            border-radius: 2px;
+        }
+
+        .owner {
+            font-size: 1.2rem;
+            color: var(--bright-yellow);
+            margin-top: 0.8rem;
+            font-weight: 500;
+        }
+
+        .parrot-animation {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: url('https://heyvanak.com/wp-content/uploads/2025/07/Rosy-faced-lovebird-1-min.jpg') center/cover;
+            border-radius: 50%;
+            border: 3px solid var(--warm-orange);
+            box-shadow: 
+                0 0 20px var(--warm-orange),
+                0 0 40px rgba(231, 126, 34, 0.5);
+            animation: fly 20s linear infinite;
+            opacity: 0.9;
+        }
+
+        .parrot-1 {
+            top: 10%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+
+        .parrot-2 {
+            top: 70%;
+            right: 10%;
+            width: 100px;
+            height: 100px;
+            animation-delay: 5s;
+            animation-duration: 25s;
+        }
+
+        .parrot-3 {
+            bottom: 20%;
+            left: 15%;
+            width: 70px;
+            height: 70px;
+            animation-delay: 10s;
+            animation-duration: 30s;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, var(--vibrant-green), var(--electric-blue));
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            margin-top: 1.5rem;
+            box-shadow: 
+                0 8px 25px rgba(39, 174, 96, 0.4),
+                0 0 15px rgba(9, 132, 227, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 12px 30px rgba(39, 174, 96, 0.6),
+                0 0 20px rgba(9, 132, 227, 0.5);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 60px 0;
+            background: rgba(13, 19, 33, 0.9);
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            position: relative;
+        }
+
+        .section-title span {
+            background: linear-gradient(45deg, var(--bright-yellow), var(--warm-orange));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--vibrant-green), var(--electric-blue));
+            margin: 15px auto;
+            border-radius: 3px;
+            box-shadow: 0 0 10px rgba(39, 174, 96, 0.5);
+        }
+
+        .parrots-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .parrots-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .parrots-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .parrot-card {
+            background: linear-gradient(145deg, #1e2a3a, #15202b);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 
+                0 10px 25px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .parrot-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.7),
+                0 0 25px rgba(39, 174, 96, 0.3);
+        }
+
+        .parrot-img-container {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .parrot-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .parrot-card:hover .parrot-img {
+            transform: scale(1.1);
+        }
+
+        .parrot-info {
+            padding: 0;
+        }
+
+        .parrot-name {
+            font-size: 1.4rem;
+            padding: 15px 20px 8px;
+            color: var(--bright-yellow);
+            background: rgba(39, 174, 96, 0.1);
+            border-bottom: 2px solid var(--warm-orange);
+        }
+
+        .description-bar {
+            background: linear-gradient(90deg, rgba(39, 174, 96, 0.2), rgba(231, 126, 34, 0.2));
+            padding: 15px 20px;
+            border-left: 4px solid var(--bright-yellow);
+        }
+
+        .parrot-description {
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .parrot-features {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .parrot-features li {
+            padding: 6px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .parrot-features li:before {
+            content: '✓';
+            color: var(--bright-yellow);
+            margin-left: 8px;
+            font-weight: bold;
+        }
+
+        .parrot-price {
+            background: linear-gradient(45deg, var(--vibrant-green), var(--electric-blue));
+            color: white;
+            padding: 10px 16px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Educational Section */
+        .educational-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #15202b, #0c141f);
+        }
+
+        .educational-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .educational-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .edu-card {
+            background: linear-gradient(145deg, #1e2a3a, #15202b);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .edu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .edu-header {
+            background: linear-gradient(45deg, var(--vibrant-green), var(--electric-blue));
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .edu-header h3 {
+            font-size: 1.5rem;
+            color: white;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .edu-header i {
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .edu-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .edu-card.active .edu-content {
+            padding: 25px;
+            max-height: 500px;
+        }
+
+        .edu-card.active .edu-header i {
+            transform: rotate(180deg);
+        }
+
+        .edu-content ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .edu-content li {
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .edu-content li:before {
+            content: '•';
+            color: var(--bright-yellow);
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #0c141f, #050a12);
+        }
+
+        .gallery-container {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .gallery-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 15px;
+            padding: 15px 0;
+            scrollbar-width: thin;
+            scrollbar-color: var(--bright-yellow) transparent;
+        }
+
+        .gallery-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .gallery-scroll::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .gallery-scroll::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, var(--bright-yellow), var(--warm-orange));
+            border-radius: 8px;
+        }
+
+        .gallery-item {
+            flex: 0 0 auto;
+            width: 250px;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .scroll-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .scroll-btn {
+            background: linear-gradient(45deg, var(--vibrant-green), var(--electric-blue));
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .scroll-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, #050a12, #03060a);
+            color: white;
+            padding: 60px 0 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .footer-section {
+                min-width: 300px;
+            }
+        }
+
+        .footer-title {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--bright-yellow);
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--warm-orange);
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+
+        .contact-info i {
+            margin-left: 10px;
+            color: var(--vibrant-green);
+            font-size: 1.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(45deg, var(--vibrant-green), var(--electric-blue));
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 
+                    0 0 30px rgba(39, 174, 96, 0.5),
+                    0 0 60px rgba(9, 132, 227, 0.3);
+            }
+            100% {
+                box-shadow: 
+                    0 0 50px rgba(39, 174, 96, 0.7),
+                    0 0 100px rgba(9, 132, 227, 0.5);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            }
+            to {
+                text-shadow: 0 3px 20px rgba(241, 196, 15, 0.5);
+            }
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(50px, -30px) rotate(5deg);
+            }
+            50% {
+                transform: translate(100px, 0) rotate(0deg);
+            }
+            75% {
+                transform: translate(50px, 30px) rotate(-5deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .brand-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .brand-tagline {
+                font-size: 1.3rem;
+            }
+            
+            .logo-main {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .logo-main::after {
+                width: 110px;
+                height: 110px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .gallery-item {
+                width: 200px;
+                height: 160px;
+            }
+            
+            .parrot-img-container {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="parrot-animation parrot-1"></div>
+        <div class="parrot-animation parrot-2"></div>
+        <div class="parrot-animation parrot-3"></div>
+        
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-main"></div>
+                <div class="brand-text">
+                    <h1>ایران فیشر</h1>
+                    <div class="brand-tagline">طوطی برزیلی</div>
+                    <div class="owner">مهدی عسگری</div>
+                </div>
+            </div>
+            
+            <a href="#products" class="cta-button">
+                مشاهده طوطی‌ها
+                <i class="fas fa-arrow-left" style="margin-right: 10px;"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main id="products">
+        <div class="container">
+            <h2 class="section-title"><span>انواع طوطی برزیلی</span></h2>
+            <div class="parrots-grid">
+                <!-- Parrot 1 -->
+                <div class="parrot-card">
+                    <div class="parrot-img-container">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/Rosy-faced-lovebird-1-min.jpg" alt="طوطی برزیلی سبز" class="parrot-img">
+                    </div>
+                    <div class="parrot-info">
+                        <h3 class="parrot-name">طوطی برزیلی ماسک صورتی</h3>
+                        <div class="description-bar">
+                            <p class="parrot-description">طوطی برزیلی ماسک صورتی با صورت صورتی رنگ و بدن سبز، یکی از زیباترین انواع طوطی‌های برزیلی است. این پرنده بسیار فعال و بازیگوش می‌باشد.</p>
+                            <ul class="parrot-features">
+                                <li>طول عمر: ۱۰ تا ۱۵ سال</li>
+                                <li>وزن: ۳۰ تا ۴۰ گرم</li>
+                                <li>توانایی صحبت: محدود</li>
+                                <li>میزان سر و صدا: متوسط</li>
+                            </ul>
+                            <div class="parrot-price">قیمت: ۱,۲۰۰,۰۰۰ تومان</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Parrot 2 -->
+                <div class="parrot-card">
+                    <div class="parrot-img-container">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/Fischers-lovebird-min.jpg" alt="طوطی برزیلی فیشر" class="parrot-img">
+                    </div>
+                    <div class="parrot-info">
+                        <h3 class="parrot-name">طوطی برزیلی فیشر</h3>
+                        <div class="description-bar">
+                            <p class="parrot-description">طوطی برزیلی فیشر با رنگ‌بندی سبز، نارنجی و زرد، بسیار چشمگیر است. این نژاد از طوطی‌های برزیلی بسیار اجتماعی و باهوش می‌باشد.</p>
+                            <ul class="parrot-features">
+                                <li>طول عمر: ۱۲ تا ۱۸ سال</li>
+                                <li>وزن: ۴۰ تا ۵۰ گرم</li>
+                                <li>توانایی صحبت: خوب</li>
+                                <li>میزان سر و صدا: کم</li>
+                            </ul>
+                            <div class="parrot-price">قیمت: ۱,۵۰۰,۰۰۰ تومان</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Parrot 3 -->
+                <div class="parrot-card">
+                    <div class="parrot-img-container">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/%D8%B7%D9%88%D8%B7%DB%8C-%D8%A8%D8%B1%D8%B2%DB%8C%D9%84%DB%8C-%D8%A2%D8%A8%DB%8C-min-1.jpg" alt="طوطی برزیلی آبی" class="parrot-img">
+                    </div>
+                    <div class="parrot-info">
+                        <h3 class="parrot-name">طوطی برزیلی آبی</h3>
+                        <div class="description-bar">
+                            <p class="parrot-description">طوطی برزیلی آبی با رنگ آبی زیبا و منحصر به فرد، بسیار نادر و ارزشمند است. این پرنده آرام و مطیع بوده و رابطه خوبی با انسان برقرار می‌کند.</p>
+                            <ul class="parrot-features">
+                                <li>طول عمر: ۱۵ تا ۲۰ سال</li>
+                                <li>وزن: ۳۵ تا ۴۵ گرم</li>
+                                <li>توانایی صحبت: عالی</li>
+                                <li>میزان سر و صدا: زیاد</li>
+                            </ul>
+                            <div class="parrot-price">قیمت: ۲,۰۰۰,۰۰۰ تومان</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Parrot 4 -->
+                <div class="parrot-card">
+                    <div class="parrot-img-container">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/%D8%B7%D9%88%D8%B7%DB%8C-%D8%A8%D8%B1%D8%B2%DB%8C%D9%84%DB%8C-%D8%B2%D8%B1%D8%AF-min.jpg" alt="طوطی برزیلی زرد" class="parrot-img">
+                    </div>
+                    <div class="parrot-info">
+                        <h3 class="parrot-name">طوطی برزیلی زرد</h3>
+                        <div class="description-bar">
+                            <p class="parrot-description">طوطی برزیلی زرد با رنگ زرد درخشان و چشمان سیاه، بسیار جذاب و محبوب است. این پرنده انرژی زیادی دارد و عاشق بازی و تعامل است.</p>
+                            <ul class="parrot-features">
+                                <li>طول عمر: ۱۰ تا ۱۵ سال</li>
+                                <li>وزن: ۳۰ تا ۴۰ گرم</li>
+                                <li>توانایی صحبت: متوسط</li>
+                                <li>میزان سر و صدا: متوسط</li>
+                            </ul>
+                            <div class="parrot-price">قیمت: ۱,۳۰۰,۰۰۰ تومان</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Educational Section -->
+    <section class="educational-section">
+        <div class="container">
+            <h2 class="section-title"><span>مطالب آموزشی طوطی برزیلی</span></h2>
+            <div class="educational-cards">
+                <!-- Card 1 -->
+                <div class="edu-card">
+                    <div class="edu-header" onclick="toggleEduCard(this)">
+                        <h3><i class="fas fa-utensils"></i> رژیم غذایی</h3>
+                    </div>
+                    <div class="edu-content">
+                        <p>تغذیه مناسب برای سلامت طوطی برزیلی بسیار مهم است. یک رژیم متعادل شامل:</p>
+                        <ul>
+                            <li>دانه‌های مخصوص طوطی برزیلی (۶۰٪ از رژیم)</li>
+                            <li>میوه‌های تازه مانند سیب، گلابی و پرتقال</li>
+                            <li>سبزیجات تازه مانند هویج، کلم بروکلی و اسفناج</li>
+                            <li>مکمل‌های معدنی و ویتامینه</li>
+                            <li>آب تازه و تمیز روزانه</li>
+                            <li>غذاهای ممنوعه: آووکادو، شکلات، کافئین</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="edu-card">
+                    <div class="edu-header" onclick="toggleEduCard(this)">
+                        <h3><i class="fas fa-heartbeat"></i> مراقبت و نگهداری</h3>
+                    </div>
+                    <div class="edu-content">
+                        <p>برای حفظ سلامت و شادابی طوطی برزیلی، این نکات را رعایت کنید:</p>
+                        <ul>
+                            <li>دمای مناسب: ۲۰-۲۵ درجه سانتی‌گراد</li>
+                            <li>رطوبت محیط: ۴۰-۶۰٪</li>
+                            <li>استحمام هفتگی با آب ولرم</li>
+                            <li>کوتاه کردن منقار و ناخن‌ها در صورت نیاز</li>
+                            <li>معاینه دوره‌ای توسط دامپزشک</li>
+                            <li>محیط عاری از دود و مواد شیمیایی</li>
+                            <li>خواب کافی (۱۰-۱۲ ساعت در شب)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="edu-card">
+                    <div class="edu-header" onclick="toggleEduCard(this)">
+                        <h3><i class="fas fa-home"></i> قفس و اسباب بازی</h3>
+                    </div>
+                    <div class="edu-content">
+                        <p>محیط زندگی مناسب برای طوطی برزیلی شامل:</p>
+                        <ul>
+                            <li>قفس با ابعاد مناسب (حداقل ۵۰×۵۰×۷۰ سانتی‌متر)</li>
+                            <li>میله‌های افقی برای بالا رفتن</li>
+                            <li>ظروف جداگانه برای آب، غذا و میوه</li>
+                            <li>اسباب بازی‌های چوبی و پلاستیکی ایمن</li>
+                            <li>نردبان، تاب و آینه برای سرگرمی</li>
+                            <li>محل استراحت و خواب جداگانه</li>
+                            <li>تمیز کردن قفس هفته‌ای دو بار</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title"><span>گالری طوطی برزیلی</span></h2>
+            <div class="gallery-container">
+                <div class="gallery-scroll" id="galleryScroll">
+                    <div class="gallery-item">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/Rosy-faced-lovebird-1-min.jpg" alt="طوطی برزیلی ۱" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>طوطی ماسک صورتی</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/Fischers-lovebird-min.jpg" alt="طوطی برزیلی ۲" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>طوطی فیشر</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/aaaaaaaaaaaaaaaaaaaaa.jpg" alt="طوطی برزیلی ۳" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>طوطی برزیلی</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/%D8%B7%D9%88%D8%B7%DB%8C-%D8%A8%D8%B1%D8%B2%DB%8C%D9%84%DB%8C-%D8%B2%D8%B1%D8%AF-min.jpg" alt="طوطی برزیلی ۴" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>طوطی زرد</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/%D8%B7%D9%88%D8%B7%DB%8C-%D8%A8%D8%B1%D8%B2%DB%8C%D9%84%DB%8C-%D8%A2%D8%A8%DB%8C-min-1.jpg" alt="طوطی برزیلی ۵" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>طوطی آبی</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/Rosy-faced-lovebird-6-min.jpg" alt="طوطی برزیلی ۶" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>طوطی ماسک صورتی</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/1-1.jpg" alt="طوطی برزیلی ۷" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>طوطی برزیلی</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://heyvanak.com/wp-content/uploads/2025/07/Rosy-faced-lovebird-min.jpg" alt="طوطی برزیلی ۸" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>طوطی ماسک صورتی</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-buttons">
+                    <button class="scroll-btn" onclick="scrollGallery('left')">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="scroll-btn" onclick="scrollGallery('right')">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">تماس با ما</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> تهران، ایران</p>
+                        <p><i class="fas fa-user"></i> مهدی عسگری</p>
+                        <p><i class="fas fa-phone"></i> 09030043287</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">شبکه‌های اجتماعی</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/+7VWk9kzOlLQ0N2Q8" class="social-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>تمامی حقوق برای ایران فیشر محفوظ است © 2023</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollGallery(direction) {
+            const gallery = document.getElementById('galleryScroll');
+            const scrollAmount = 250;
+            
+            if (direction === 'left') {
+                gallery.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            } else {
+                gallery.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function toggleEduCard(element) {
+            const card = element.parentElement;
+            card.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
